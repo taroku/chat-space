@@ -33,7 +33,7 @@
 - belongs_to :group
 - belongs_to :user
 
-## membersテーブル
+## user_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|reference|null: false, foreign_key: true|
