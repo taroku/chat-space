@@ -1,0 +1,47 @@
+// SCSSのメリットである、ネストやパーシャル化、変数化、mixinなどを使用し効率的にCSSを記述する
+// SCSSを使用すると、ネストやパーシャル化、変数化することでCSSを記述するよりも無駄なく効率的にスタイルシートを記述することができます。
+// 積極的にSCSSの記法を試していきましょう。
+$white:#FFFFFF;
+$black:#090c10;
+
+.chat-side{
+  width:300px;
+  height: 100vh;
+  background-color: #2f3e51;
+  float:left;
+    &__user{
+      height:15%;
+      width:100%;
+      background-color : $black;
+      position: relative;
+        &-content{
+          height      : 50px;
+          width       : 100%;
+          line-height : 50px;
+          margin      : auto 0;
+          position    : absolute;
+          top         : 0;
+          bottom      : 0;
+        }
+        &-name{
+          font-size   : 16px;
+          font-weight : bold;
+          color       : $white;
+          margin      : 0 20px;
+          position    : relative;
+          display     : inline-block;
+        }
+        &--new-group{
+          color       : $white;
+          margin-left : 90px;
+          position    : relative;
+          display     : inline-block;
+        }
+        &--edit-user{
+          color    : $white;
+          position : relative;
+          display  : inline-block;
+        }
+    }
+
+}
