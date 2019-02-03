@@ -11,10 +11,36 @@
     %div.chat-side__groups-list
       %a
         %div.chat-side__group
-          %div.chat-side__group-name
-          %div.chat-side__group-message
+          %div.chat-side__group-name test男
+          %div.chat-side__group-message oredayon
       %a
         %div.chat-side__group
-          %div.chat-side__group-name
-          %div.chat-side__group-message
+          %div.chat-side__group-name テスオ
+          %div.chat-side__group-message テスオです
+%div.chat-main
+  %div.chat-main__header
+    %div.chat-main__header--group.clearfix
+      %div.chat-main__header--group-name test男
+      %a.chat-main__header--group-edit-btn{ href: '', id: 'none' } Edit
+    %div.chat-main__header-members
+      MEMBER:
+      %i
+      sample
 
+  %div.chat-main__body
+    %div.chat-main__body--messages-list
+      %div.chat-main__message.clearfix
+        %div.chat-main__message-name sample
+        %div.chat-main__message-time 2019/02/03 02:05:57
+        %div.chat-main__message-body
+          aaaaaa
+          %img.chat-main__message-body-image
+
+  %div.chat-main__footer
+    = form_tag('/test', method: :post,id: "new_message",class: "chat-main__footer-form") do
+      %div.chat-main__footer-body
+        %input#message_body.message{name: "message[body]", placeholder: "type a message", type: "text"}/
+        %label.chat-file{for: "message_image"}
+          %input#message_image.image{name: "message[image]", type: "file"}
+          %i.fa.fa-image
+      %input.submit{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}
