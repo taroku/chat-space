@@ -1,0 +1,57 @@
+.chat-side{
+  width:300px;
+  height: 100vh;
+  float:left;
+    &__user{
+      height:15%;
+      width:100%;
+      background-color : $black;
+      position: relative;
+        &-content{
+          height      : 50px;
+          width       : 100%;
+          line-height : 50px;
+          margin      : auto 0;
+          position    : absolute;
+          top         : 0;
+          bottom      : 0;
+        }
+        &-name{
+          font-size   : 16px;
+          font-weight : bold;
+          color       : $white;
+          margin      : 0 20px;
+          position    : relative;
+          display     : inline-block;
+        }
+        &--new-group{
+          color       : $white;
+          margin-left : 90px;
+          position    : relative;
+          display     : inline-block;
+        }
+        &--edit-user{
+          color    : $white;
+          position : relative;
+          display  : inline-block;
+        }
+    }
+    &__groups{
+      height           : 85%;
+      width            : 100%;
+      background-color : $indigo;
+        &-list{
+              height : 100%;
+              color  : $white;
+        }
+    }
+    &__group{
+      padding:20px;
+        &-name{
+          font-size: 15px;
+        }
+        &-message{
+          font-size: 11px;
+        }
+    }
+}

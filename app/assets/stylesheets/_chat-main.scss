@@ -1,0 +1,111 @@
+.chat-main{
+    height : 100vh;
+    width  : calc( 100vw - 320px );
+    float  : left;
+// header
+      &__header{
+        height : 15%;
+        border : 1px solid #eee;
+        &--group{
+          @include clearfix();
+          margin : 0 40px;
+          &-name{
+            font-size : 20px;
+            color     : #333333;
+            margin    : 35px 0 15px;
+            float     : left;
+          }
+          &-edit-btn{
+            color     : $blue;
+            font-size : 15px;
+            border    : 1px solid $blue;
+            float     : right;
+            padding   : 12.5px 20px;
+            margin    : 28px 20px 0px;
+          }
+        }
+        &-members{
+            font-size : 12px;
+            color     : $light-gray;
+            margin    : 0 40px;
+          }
+      }
+// body
+      &__body{
+      height     : calc( 100vh - 15% - 90px );
+      overflow-y : scroll;
+        &--messages-list{
+          padding-top  : 26px;
+          padding-left : 40px;
+        }
+      }
+      &__message{
+        @include clearfix();
+        padding : 20px 0;
+        &-name{
+          color       : $gray;
+          font-size   : 16px;
+          font-weight : bold;
+          float       : left;
+        }
+        &-time{
+          color     : $light-gray;
+          font-size : 12px;
+          padding   : 0 10px 10px;
+          float     : left;
+        }
+        &-body{
+          color: $gray;
+          clear: both;
+        }
+        &-image{
+
+        }
+      }
+// footer
+&__footer{
+  height           : 90px;
+  width            : 100%;
+  background-color : $heavy-gray;
+  &-form{
+    margin   : 0 40px;
+    position : relative;
+  }
+  &-body{
+    position: relative;
+    .message{
+      height  : 50px;
+      width   : calc( 100% - 130px );
+      padding : 15px 10px;
+      margin  : 20px 0;
+      border  : none;
+    }
+    .chat-file{
+      height   : 50px;
+      width    : 40px;
+      margin   : 32px 130px 20px 0;
+      position : absolute;
+      top      : 0;
+      right    : 0;
+      .image{
+        position : absolute;
+        top      : 15px;
+        left     : 15px;
+        display  : none;
+      }
+    }
+  }
+  .submit{
+        color            : $white;
+        width            : 100px;
+        height           : 50px;
+        text-align       : center;
+        background-color : $blue;
+        margin           : 20px 0;
+        position         : absolute;
+        top              : 0;
+        right            : 0;
+        border           : none;
+  }
+}
+}
