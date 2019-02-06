@@ -1,0 +1,11 @@
+// SCSSのメリットである、ネストやパーシャル化、変数化、mixinなどを使用し効率的にCSSを記述する
+// SCSSを使用すると、ネストやパーシャル化、変数化することでCSSを記述するよりも無駄なく効率的にスタイルシートを記述することができます。
+// 積極的にSCSSの記法を試していきましょう。
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+@import "./variable";
+@import "./mixin";
+@import "./chat-main";
+@import "./chat-side";
