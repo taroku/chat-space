@@ -44,3 +44,4 @@
           %input#message_image.image{name: "message[image]", type: "file"}
           %i.fa.fa-image
       %input.submit{"data-disable-with": "Send", name: "commit", type: "submit", value: "Send"}
+    = link_to "ログアウト", destroy_user_session_path, method: :delete
