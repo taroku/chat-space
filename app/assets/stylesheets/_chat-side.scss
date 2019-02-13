@@ -29,6 +29,9 @@
           margin-left : 90px;
           position    : relative;
           display     : inline-block;
+          .fa{
+            color:$white;
+          }
         }
         &--edit-user{
           color    : $white;
@@ -52,9 +55,11 @@
       padding:20px;
         &-name{
           font-size: 15px;
+          color  : $white;
         }
         &-message{
           font-size: 11px;
+          color  : $white;
         }
     }
 }
