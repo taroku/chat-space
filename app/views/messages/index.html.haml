@@ -25,9 +25,9 @@
     .form
       .chat-main__footer-body
         = form_for [@group, @message] do |f|
-          = f.text_field :content, class: 'chat-main__footer-body message', placeholder: 'type a message'
+          = f.text_field :content, class: 'message', placeholder: 'type a message'
           .form__mask
-            = f.label :image, class: 'chat-main__footer-body chat-file' do
+            = f.label :image, class: ' chat-file' do
               = fa_icon 'picture-o', class: 'chat-main__footer-body image'
               = f.file_field :image, class: 'hidden'
-          = f.submit 'Send', class: 'form__submit'
+          = f.submit 'Send', class: 'submit'
