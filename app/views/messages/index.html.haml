@@ -1,24 +1,4 @@
-%div.chat-side
-  %div.chat-side__user
-    %div.chat-side__user-content
-      %div.chat-side__user-name= current_user.name
-      %a.chat-side__user--new-group
-        %i.fa.fa-pencil-square-o
-      %li.chat-side__user--edit-user
-        = link_to edit_user_path(current_user) do
-          = fa_icon 'cog', class: 'icon'
-
-
-  %div.chat-side__groups
-    %div.chat-side__groups-list
-      %a
-        %div.chat-side__group
-          %div.chat-side__group-name test男
-          %div.chat-side__group-message oredayon
-      %a
-        %div.chat-side__group
-          %div.chat-side__group-name テスオ
-          %div.chat-side__group-message テスオです
+= render 'shared/side_bar'
 %div.chat-main
   %div.chat-main__header
     %div.chat-main__header--group.clearfix
