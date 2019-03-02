@@ -21,11 +21,11 @@
   .messages
     = render @messages
 
-  %div.chat-main__footer
+  %div.chat-main__footer(id="chat-main__footer")
     .form
       .chat-main__footer-body
         = form_for [@group, @message], html: {id: 'new_message'} do |f|
-          = f.text_field :content, class: 'message', placeholder: 'type a message'
+          = f.text_field :content, class: 'message textbox', placeholder: 'type a message'
           .form__mask
             = f.label :image, class: ' chat-file' do
               = fa_icon 'picture-o', class: 'chat-main__footer-body image'
