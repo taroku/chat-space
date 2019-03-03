@@ -15,7 +15,7 @@ $(function(){
                         </div>
                         <div class="chat-main__message-body">
                           <p class="lower-message__content">
-                            ${message.content}
+                            ${message.text}
                           </p>
                         </div>
                       </div>
@@ -57,7 +57,7 @@ $(function(){
   var group_id = $('.chat-main__header--group-name').data('id');
   if (path == `/groups/${group_id}/messages`) {
     setInterval(function(){
-      var message_id = $('.messages:last').data('id');
+      var message_id = $('.chat-main__body:last').data('id');
         $.ajax({
           url: path,
           type: 'GET',
