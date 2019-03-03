@@ -1,8 +1,8 @@
 $(function(){
   function buildHTML(message){
     var image = '';
-    if(message.image.url) {
-      image = `<img src="${message.image.url}" class="lower-message__image">`;
+    if(message.image) {
+      image = `<img src="${message.image}" class="lower-message__image">`;
     }
     var html = `<div class="chat-main__body" data-id="${message.id}">
                   <div class="chat-main__body--messages-list">
@@ -66,7 +66,6 @@ $(function(){
           },
           dataType: 'json'
         })
-
         .done(function(data){
           data.forEach(function(message){
             var html = buildHTML(message)

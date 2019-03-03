@@ -6,7 +6,7 @@ before_action :set_group
     @messages = @group.messages.includes(:user)
     respond_to do |format|
       format.html
-      format.json { @new_message = Message.where('id > ?', params[:id] )}
+      format.json { @new_message = Message.where('id > ?', params[:id]) }
     end
   end
 
