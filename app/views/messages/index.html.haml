@@ -2,8 +2,9 @@
 %div.chat-main
   %div.chat-main__header
     %div.chat-main__header--group.clearfix
-      %div.chat-main__header--group-name test男
-      %a.chat-main__header--group-edit-btn{ href: '', id: 'none' } Edit
+      %div.chat-main__header--group-name{"data-id": @group.id}
+        = @group.name
+      %a.chat-main__header--group-edit-btn Edit
     %div.chat-main__header-members
       MEMBER:
       %i
